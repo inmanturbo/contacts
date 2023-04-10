@@ -29,6 +29,10 @@ class Contact extends Model
         'user_id',
     ];
 
+    /*
+     * ACCESSORS
+     */
+
     public function getNameAttribute()
     {
         if ($this->type == 'business') {
@@ -37,6 +41,10 @@ class Contact extends Model
 
         return $this->first_name.' '.$this->last_name;
     }
+
+    /*
+     * RELATIONS
+     */
 
     public function lists()
     {

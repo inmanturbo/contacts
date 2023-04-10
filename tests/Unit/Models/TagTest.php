@@ -30,7 +30,7 @@ it('can assign a tag to a Contact', function () {
 
 it('can assign a tag to a ContactList', function () {
 
-    $contactList = ContactList::create(['name'=>'test name', 'user_id'=>1]);
+    $contactList = ContactList::create(['name' => 'test name', 'user_id' => 1]);
     $tag = Tag::create([
         'name' => 'Test tag',
         'user_id' => 1,

@@ -23,12 +23,6 @@ php artisan vendor:publish --tag="laravel-contacts-manager-migrations"
 php artisan migrate
 ```
 
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-contacts-manager-views"
-```
-
 ## Usage
 
 ```php
@@ -66,6 +60,19 @@ $list->contacts
 //fetch all lists connected to a contact
 
 $contact->lists
+
+//Contact and ContactList are taggable. Feel free to use tags as you desire in your flow
+//Tags are meant to be a flexible way to categorize your model.
+$tag = Tag::create(['name' => 'Test tag', 'user_id' => $user->id]);
+
+$contact->tags()->attach($tag->id)
+
+$contactList->tags()->attach($tag->id)
+
+//Retrive taggable elements from a tag
+
+$tag->contacts //returns a collection of Contacts
+$tag->contactLists //returns a collection of ContactList
 ```
 
 ## Testing

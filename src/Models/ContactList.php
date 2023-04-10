@@ -5,12 +5,17 @@ namespace Sellinnate\LaravelContactsManager\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Foundation\Auth\User;
+use function PHPUnit\Framework\isNull;
 
 class ContactList extends Model
 {
     protected $table = 'contact_lists';
 
     protected $fillable = ['name', 'user_id'];
+
+    /*
+     * RELATIONS
+     */
 
     public function contacts()
     {
@@ -25,5 +30,27 @@ class ContactList extends Model
     public function tags(): MorphToMany
     {
         return $this->morphToMany(Tag::class, 'taggable');
+    }
+
+    /*
+     * UTILS
+     */
+
+    public function toEmailsArray()
+    {
+        return collect($this->contacts)->map(function (Contact $contact) {
+            return $contact->email;
+        })->reject(function ($email) {
+            return $email=='' || is_null($email);
+        })->toArray();
+    }
+
+    public function toNamesArray()
+    {
+        return collect($this->contacts)->map(function (Contact $contact) {
+            return $contact->name;
+        })->reject(function ($name) {
+            return $name=='' || is_null($name);
+        })->toArray();
     }
 }
