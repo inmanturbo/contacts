@@ -32,7 +32,7 @@ it('fetch the correct contact name attribute for a business contact', function (
     expect($model->name)->toBe('sellinnate');
 });
 
-it('correctly attach to a list', function(){
+it('correctly attach to a list', function () {
     $contact = Contact::factory()->create();
     $list = ContactList::create(['name' => 'test list']);
     $contact->lists()->attach($list->id);

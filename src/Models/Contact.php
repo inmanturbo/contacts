@@ -35,7 +35,8 @@ class Contact extends Model
         return $this->first_name.' '.$this->last_name;
     }
 
-    public function lists() {
+    public function lists()
+    {
         return $this->belongsToMany(ContactList::class, 'contact_lists_contacts');
     }
 }
