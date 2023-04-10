@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Sellinnate\LaravelContactsManager\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelContactsManagerCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-contacts-manager';
 
     public $description = 'My command';
 

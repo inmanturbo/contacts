@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "sellinnate/laravel-contacts-manager",
+    "description": "A simple utility package to handle contacts lists in Laravel",
     "keywords": [
-        ":vendor_name",
+        "Sellinnate",
         "laravel",
-        ":package_slug"
+        "laravel-contacts-manager"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/sellinnate/laravel-contacts-manager",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Filippo Calabrese",
+            "email": "filippo@sellinnate.com",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Sellinnate\\LaravelContactsManager\\": "src/",
+            "Sellinnate\\LaravelContactsManager\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Sellinnate\\LaravelContactsManager\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -61,10 +61,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Sellinnate\\LaravelContactsManager\\LaravelContactsManagerServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelContactsManager": "Sellinnate\\LaravelContactsManager\\Facades\\LaravelContactsManager"
             }
         }
     },
