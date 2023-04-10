@@ -37,5 +37,11 @@ class TestCase extends Orchestra
         $migration = include __DIR__.'/../database/migrations/create_contact_lists_contacts_pivot_table.php';
         $migration->up();
 
+        $migration = include __DIR__.'/../database/migrations/create_tags_table.php';
+        $migration->up();
+
+        $migration = include __DIR__.'/../database/migrations/create_taggables_table.php';
+        $migration->up();
+
     }
 }

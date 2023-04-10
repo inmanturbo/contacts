@@ -25,6 +25,7 @@ class ContactFactory extends Factory
             'vat_number' => Company::vat(),
             'notes' => $this->faker->sentence,
             'type' => $this->faker->randomElement(['business', 'private']),
+            'user_id' => 1,
         ];
 
     }

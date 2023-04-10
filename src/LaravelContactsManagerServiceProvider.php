@@ -18,6 +18,12 @@ class LaravelContactsManagerServiceProvider extends PackageServiceProvider
             ->name('laravel-contacts-manager')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigrations('create_contacts_table', 'create_contact_lists_table', 'create_contacts_lists_contacts_pivot_table');
+            ->hasMigrations(
+                'create_contacts_table',
+                'create_contact_lists_table',
+                'create_contacts_lists_contacts_pivot_table',
+                'create_tags_table',
+                'create_taggables_table'
+            );
     }
 }

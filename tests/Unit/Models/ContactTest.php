@@ -34,7 +34,7 @@ it('fetch the correct contact name attribute for a business contact', function (
 
 it('correctly attach to a list', function () {
     $contact = Contact::factory()->create();
-    $list = ContactList::create(['name' => 'test list']);
+    $list = ContactList::create(['name' => 'test list', 'user_id' => 1]);
     $contact->lists()->attach($list->id);
 
     expect(count($contact->lists))->toBe(1);

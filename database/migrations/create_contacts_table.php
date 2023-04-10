@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('vat_number')->nullable();
             $table->text('notes')->nullable();
             $table->enum('type', ['private', 'business']);
+            $table->unsignedInteger('user_id');
 
             $table->timestamps();
 

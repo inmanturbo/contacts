@@ -8,12 +8,13 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('contact_lists', function (Blueprint $table) {
+        Schema::create('taggables', function (Blueprint $table) {
 
             $table->id();
 
-            $table->string('name');
-            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('tag_id');
+            $table->unsignedInteger('taggable_id');
+            $table->string('taggable_type');
 
             $table->timestamps();
 
