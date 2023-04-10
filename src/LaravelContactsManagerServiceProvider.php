@@ -2,7 +2,6 @@
 
 namespace Sellinnate\LaravelContactsManager;
 
-use Sellinnate\LaravelContactsManager\Commands\LaravelContactsManagerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
