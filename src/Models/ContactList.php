@@ -5,7 +5,6 @@ namespace Sellinnate\LaravelContactsManager\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Foundation\Auth\User;
-use function PHPUnit\Framework\isNull;
 
 class ContactList extends Model
 {
@@ -41,7 +40,7 @@ class ContactList extends Model
         return collect($this->contacts)->map(function (Contact $contact) {
             return $contact->email;
         })->reject(function ($email) {
-            return $email=='' || is_null($email);
+            return $email == '' || is_null($email);
         })->toArray();
     }
 
@@ -50,7 +49,7 @@ class ContactList extends Model
         return collect($this->contacts)->map(function (Contact $contact) {
             return $contact->name;
         })->reject(function ($name) {
-            return $name=='' || is_null($name);
+            return $name == '' || is_null($name);
         })->toArray();
     }
 }
