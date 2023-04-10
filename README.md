@@ -50,29 +50,29 @@ ContactList::create([
 
 //attach a contact to a list and viceversa
 
-$contact->lists()->attach($listId)
-$list->contacts()->attach($contactId)
+$contact->lists()->attach($listId);
+$list->contacts()->attach($contactId);
 
 //fetch contacts from a list
 
-$list->contacts
+$list->contacts;
 
 //fetch all lists connected to a contact
 
-$contact->lists
+$contact->lists;
 
 //Contact and ContactList are taggable. Feel free to use tags as you desire in your flow
 //Tags are meant to be a flexible way to categorize your model.
 $tag = Tag::create(['name' => 'Test tag', 'user_id' => $user->id]);
 
-$contact->tags()->attach($tag->id)
+$contact->tags()->attach($tag->id);
 
-$contactList->tags()->attach($tag->id)
+$contactList->tags()->attach($tag->id);
 
 //Retrive taggable elements from a tag
 
-$tag->contacts //returns a collection of Contacts
-$tag->contactLists //returns a collection of ContactList
+$tag->contacts; //returns a collection of Contacts
+$tag->contactLists; //returns a collection of ContactList
 ```
 
 ## Testing
