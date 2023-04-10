@@ -2,9 +2,9 @@
 
 namespace Sellinnate\LaravelContactsManager;
 
+use Sellinnate\LaravelContactsManager\Commands\LaravelContactsManagerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Sellinnate\LaravelContactsManager\Commands\LaravelContactsManagerCommand;
 
 class LaravelContactsManagerServiceProvider extends PackageServiceProvider
 {
@@ -19,6 +19,7 @@ class LaravelContactsManagerServiceProvider extends PackageServiceProvider
             ->name('laravel-contacts-manager')
             ->hasConfigFile()
             ->hasViews()
+            ->hasMigrations('create_contacts_table')
             ->hasMigration('create_laravel-contacts-manager_table')
             ->hasCommand(LaravelContactsManagerCommand::class);
     }
