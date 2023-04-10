@@ -23,19 +23,6 @@ php artisan vendor:publish --tag="laravel-contacts-manager-migrations"
 php artisan migrate
 ```
 
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-contacts-manager-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
 Optionally, you can publish the views using
 
 ```bash
@@ -45,8 +32,40 @@ php artisan vendor:publish --tag="laravel-contacts-manager-views"
 ## Usage
 
 ```php
-$laravelContactsManager = new Sellinnate\LaravelContactsManager();
-echo $laravelContactsManager->echoPhrase('Hello, Sellinnate!');
+//Create a contact
+Contact::create([
+    'first_name' => '...',
+    'last_name' => '...',
+    'business_name' => '...',
+    'address' => '...',
+    'zip_code' => '...',
+    'country_code' => '...',
+    'email' => '...',
+    'mobile' => '...',
+    'phone' => '...',
+    'vat_number' => '...',
+    'notes' => '...',
+    'type' => '...' // MANDATORY: 'private' or 'business',
+]);
+
+//Create a contact list
+ContactList::create([
+    'user_id' => '1' //desired user id
+    'name' => 'this is the list name'
+]);
+
+//attach a contact to a list and viceversa
+
+$contact->lists()->attach($listId)
+$list->contacts()->attach($contactId)
+
+//fetch contacts from a list
+
+$list->contacts
+
+//fetch all lists connected to a contact
+
+$contact->lists
 ```
 
 ## Testing
@@ -69,7 +88,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Filippo Calabrese](https://github.com/Sellinnate)
+- [Filippo Calabrese](https://github.com/filippocalabrese)
 - [All Contributors](../../contributors)
 
 ## License
