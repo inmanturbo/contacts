@@ -24,6 +24,7 @@ class LaravelContactsManagerServiceProvider extends PackageServiceProvider
                 'create_contacts_lists_contacts_pivot_table',
                 'create_tags_table',
                 'create_taggables_table'
-            );
+            )
+            ->runsMigrations();
     }
 }
