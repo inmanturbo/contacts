@@ -6,28 +6,42 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Foundation\Auth\User;
+use Sellinnate\LaravelContactsManager\HasChildren;
 
 class Contact extends Model
 {
     use HasFactory;
+    use HasChildren;
 
     protected $table = 'contacts';
 
     protected $fillable = [
+        'website',
+        'logo_url',
+        'logo_path',
         'first_name',
         'last_name',
         'address',
+        'line_two',
+        'city',
+        'state',
         'zip_code',
         'country_code',
         'email',
         'mobile',
         'phone',
-        'mobile',
+        'fax',
         'vat_number',
         'notes',
         'type',
         'user_id',
+        'team_uuid',
     ];
+
+    public function getChildTypes()
+    {
+        return config('contacts-manager.contact_types');
+    }
 
     /*
      * ACCESSORS
