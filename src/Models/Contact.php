@@ -10,8 +10,8 @@ use Sellinnate\LaravelContactsManager\HasChildren;
 
 class Contact extends Model
 {
-    use HasFactory;
     use HasChildren;
+    use HasFactory;
 
     protected $table = 'contacts';
 
