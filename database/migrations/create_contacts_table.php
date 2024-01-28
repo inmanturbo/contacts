@@ -31,7 +31,7 @@ return new class extends Migration
             $table->string('vat_number')->nullable();
             $table->text('notes')->nullable();
             $table->string('type')->nullable();
-            $table->unsignedInteger('user_id');
+            $table->foreignUuid('user_uuid')->nullable();
             $table->foreignUuid('team_uuid')->nullable();
 
             $table->timestamps();
