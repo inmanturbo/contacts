@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-contacts-manager` will be documented in this file.
 
+## 1.1.4 - 2024-01-29
+
+**Full Changelog**: https://github.com/inmanturbo/contacts/compare/1.1.3...1.1.4
+
 ## 1.1.3 - 2024-01-29
 
 **Full Changelog**: https://github.com/inmanturbo/contacts/compare/1.1.2...1.1.3
