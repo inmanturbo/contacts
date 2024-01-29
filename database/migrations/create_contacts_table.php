@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('logo_url')->nullable();
             $table->string('logo_path')->nullable();
             $table->string('first_name')->nullable();
+            $table->string('middle_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('business_name')->nullable();
             $table->string('address')->nullable();
