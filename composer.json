@@ -2,16 +2,16 @@
     "name": "inmanturbo/contacts",
     "description": "A simple utility package to handle contacts lists in Laravel",
     "keywords": [
-        "Sellinnate",
+        "inmanturbo",
         "laravel",
         "laravel-contacts-manager"
     ],
-    "homepage": "https://github.com/sellinnate/laravel-contacts-manager",
+    "homepage": "https://github.com/inmanturbo/laravel-contacts-manager",
     "license": "MIT",
     "authors": [
         {
-            "name": "Filippo Calabrese",
-            "email": "filippo@sellinnate.com",
+            "name": "inmanturbo",
+            "email": "inman.turbo@gmail.com",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Sellinnate\\LaravelContactsManager\\": "src/",
-            "Sellinnate\\LaravelContactsManager\\Database\\Factories\\": "database/factories/"
+            "Inmanturbo\\ContactsManager\\": "src/",
+            "Inmanturbo\\ContactsManager\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Sellinnate\\LaravelContactsManager\\Tests\\": "tests/"
+            "Inmanturbo\\ContactsManager\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -61,10 +61,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Sellinnate\\LaravelContactsManager\\LaravelContactsManagerServiceProvider"
+                "Inmanturbo\\ContactsManager\\ContactsManagerServiceProvider"
             ],
             "aliases": {
-                "LaravelContactsManager": "Sellinnate\\LaravelContactsManager\\Facades\\LaravelContactsManager"
+                "ContactsManager": "Inmanturbo\\ContactsManager\\Facades\\ContactsManager"
             }
         }
     },

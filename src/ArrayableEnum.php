@@ -1,6 +1,6 @@
 <?php
 
-namespace Sellinnate\LaravelContactsManager;
+namespace Inmanturbo\ContactsManager;
 
 trait ArrayableEnum
 {

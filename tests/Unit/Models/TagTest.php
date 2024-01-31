@@ -1,8 +1,8 @@
 <?php
 
-use Sellinnate\LaravelContactsManager\Models\Contact;
-use Sellinnate\LaravelContactsManager\Models\ContactList;
-use Sellinnate\LaravelContactsManager\Models\Tag;
+use Inmanturbo\ContactsManager\Models\Contact;
+use Inmanturbo\ContactsManager\Models\ContactList;
+use Inmanturbo\ContactsManager\Models\Tag;
 
 it('can create a tag', function () {
 

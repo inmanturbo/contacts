@@ -1,7 +1,7 @@
 <?php
 
-use Sellinnate\LaravelContactsManager\Models\Contact;
-use Sellinnate\LaravelContactsManager\Models\ContactList;
+use Inmanturbo\ContactsManager\Models\Contact;
+use Inmanturbo\ContactsManager\Models\ContactList;
 
 it('can create a contact list', function () {
     ContactList::create(['name' => 'Test list',  'user_id' => 1]);

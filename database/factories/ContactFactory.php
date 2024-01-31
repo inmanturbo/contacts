@@ -1,10 +1,10 @@
 <?php
 
-namespace Sellinnate\LaravelContactsManager\Database\Factories;
+namespace Inmanturbo\ContactsManager\Database\Factories;
 
 use Faker\Provider\it_IT\Company;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Sellinnate\LaravelContactsManager\Models\Contact;
+use Inmanturbo\ContactsManager\Models\Contact;
 
 class ContactFactory extends Factory
 {

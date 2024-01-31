@@ -1,12 +1,12 @@
 <?php
 
-namespace Sellinnate\LaravelContactsManager\Models;
+namespace Inmanturbo\ContactsManager\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Foundation\Auth\User;
-use Sellinnate\LaravelContactsManager\HasChildren;
+use Inmanturbo\ContactsManager\HasChildren;
 
 class Contact extends Model
 {

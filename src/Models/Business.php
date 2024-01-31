@@ -1,8 +1,8 @@
 <?php
 
-namespace Sellinnate\LaravelContactsManager\Models;
+namespace Inmanturbo\ContactsManager\Models;
 
-use Sellinnate\LaravelContactsManager\HasParent;
+use Inmanturbo\ContactsManager\HasParent;
 
 class Business extends Contact
 {

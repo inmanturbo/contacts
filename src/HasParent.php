@@ -1,6 +1,6 @@
 <?php
 
-namespace Sellinnate\LaravelContactsManager;
+namespace Inmanturbo\ContactsManager;
 
 use Illuminate\Events\Dispatcher;
 use Illuminate\Support\Str;

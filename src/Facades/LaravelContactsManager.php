@@ -1,16 +1,16 @@
 <?php
 
-namespace Sellinnate\LaravelContactsManager\Facades;
+namespace Inmanturbo\ContactsManager\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Sellinnate\LaravelContactsManager\LaravelContactsManager
+ * @see \Inmanturbo\ContactsManager\ContactsManager
  */
-class LaravelContactsManager extends Facade
+class ContactsManager extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \Sellinnate\LaravelContactsManager\LaravelContactsManager::class;
+        return \Inmanturbo\ContactsManager\ContactsManager::class;
     }
 }

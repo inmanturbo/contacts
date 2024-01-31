@@ -1,18 +1,18 @@
 <?php
 
-namespace Sellinnate\LaravelContactsManager\Models;
+namespace Inmanturbo\ContactsManager\Models;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Sellinnate\LaravelContactsManager\ContactType;
-use Sellinnate\LaravelContactsManager\Database\Factories\ContactFactory;
-use Sellinnate\LaravelContactsManager\HasParent;
+use Inmanturbo\ContactsManager\ContactType;
+use Inmanturbo\ContactsManager\Database\Factories\ContactFactory;
+use Inmanturbo\ContactsManager\HasParent;
 
 class Person extends Contact
 {
-    use HasParent;
     use HasFactory;
+    use HasParent;
 
     protected $guarded = [];
 
@@ -26,10 +26,10 @@ class Person extends Contact
 
     protected function splitName(?string $value = null): ?array
     {
-        if (!$value) {
+        if (! $value) {
             return null;
         }
-    
+
         $names = explode(' ', $value, 3); // Split into 2 parts at most to handle middle names
 
         return [
@@ -45,7 +45,7 @@ class Person extends Contact
     protected static function newFactory(): Factory
     {
         return ContactFactory::new([
-            'type' => ContactType::private->name
+            'type' => ContactType::private->name,
         ]);
     }
 }
