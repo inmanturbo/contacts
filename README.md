@@ -1,10 +1,5 @@
 # Laravel Contacts Manager
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/sellinnate/laravel-contacts-manager.svg?style=flat-square)](https://packagist.org/packages/sellinnate/laravel-contacts-manager)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/sellinnate/laravel-contacts-manager/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/sellinnate/laravel-contacts-manager/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/sellinnate/laravel-contacts-manager/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/sellinnate/laravel-contacts-manager/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/sellinnate/laravel-contacts-manager.svg?style=flat-square)](https://packagist.org/packages/sellinnate/laravel-contacts-manager)
-
 A simple utility package to handle contacts lists in Laravel
 
 
@@ -13,13 +8,13 @@ A simple utility package to handle contacts lists in Laravel
 You can install the package via composer:
 
 ```bash
-composer require sellinnate/laravel-contacts-manager
+composer require inmanturbo/laravel-contacts-manager
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-contacts-manager-migrations"
+php artisan vendor:publish --tag="contacts-manager-migrations"
 php artisan migrate
 ```
 
