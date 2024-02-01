@@ -35,21 +35,18 @@ class ContactsManagerServiceProvider extends PackageServiceProvider
 
     public function packageBooted()
     {
-
-        if($this->app->config['contacts-manager.features.routes'] === false) {
-            return;
+        if($this->app->config['contacts-manager.features.ui.enabled']) {
+            $this->configureUi();
         }
-        
+    }
+
+    protected function configureUi()
+    {
         foreach (File::glob(__DIR__.'/../resources/views/pages/[0-9]*', GLOB_ONLYDIR) as $version) {
             $version = basename($version);
             Folio::path(__DIR__.'/../resources/views/pages/'.$version)
                 ->uri('/contacts/v'.$version)
-                ->middleware([
-                    'web',
-                    'auth:sanctum',
-                    config('jetstream.auth_session'),
-                    'verified',
-                ]);
+                ->middleware(config('contacts-manager.ui.middleware', ['web']));
         }
 
         $this->app->booted(function () {

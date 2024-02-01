@@ -2,10 +2,12 @@
 
 namespace Inmanturbo\ContactsManager\Models;
 
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Foundation\Auth\User;
+use Inmanturbo\ContactsManager\Database\Factories\ContactFactory;
 use Inmanturbo\ContactsManager\HasChildren;
 
 class Contact extends Model
@@ -37,6 +39,14 @@ class Contact extends Model
         'user_id',
         'team_uuid',
     ];
+
+    /**
+     * Create a new factory instance for the model.
+     */
+    protected static function newFactory(): Factory
+    {
+        return ContactFactory::new();
+    }
 
     public function getChildTypes()
     {
