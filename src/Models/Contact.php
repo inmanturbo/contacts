@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Foundation\Auth\User;
+use Inmanturbo\ContactsManager\BusinessDirectory;
+use Inmanturbo\ContactsManager\BusinessType;
 use Inmanturbo\ContactsManager\Database\Factories\ContactFactory;
 use Inmanturbo\ContactsManager\HasChildren;
 
@@ -21,8 +23,12 @@ class Contact extends Model
         'website',
         'logo_url',
         'logo_path',
+        'slug',
         'first_name',
+        'middle_name',
         'last_name',
+        'business_name',
+        'business_branch',
         'address',
         'line_two',
         'city',
@@ -36,8 +42,21 @@ class Contact extends Model
         'vat_number',
         'notes',
         'type',
+        'business_type',
+        'directory',
+        'referred_by',
+        'use_accounts',
+        'is_active',
+        'send_newsletter',
         'user_id',
         'team_uuid',
+    ];
+
+    protected $casts = [
+        'is_active' => 'boolean',
+        'send_newsletter' => 'boolean',
+        'business_type' => BusinessType::class,
+        'directory' => BusinessDirectory::class,
     ];
 
     /**

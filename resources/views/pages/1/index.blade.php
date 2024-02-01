@@ -1,8 +1,10 @@
 <?php
 
-use function Laravel\Folio\name;
+use function Laravel\Folio\{name, middleware};
 
 name('contacts.v1.index');
+
+middleware(config('contacts-manager.features.ui.middleware'));
 
 ?>
 

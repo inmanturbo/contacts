@@ -46,7 +46,7 @@ class ContactsManagerServiceProvider extends PackageServiceProvider
             $version = basename($version);
             Folio::path(__DIR__.'/../resources/views/pages/'.$version)
                 ->uri('/contacts/v'.$version)
-                ->middleware(config('contacts-manager.ui.middleware', ['web']));
+                ->middleware(config('contacts-manager.features.ui.middleware', ['web']));
         }
 
         $this->app->booted(function () {
