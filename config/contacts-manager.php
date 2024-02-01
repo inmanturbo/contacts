@@ -7,6 +7,7 @@ return [
         'ui' => [
             'enabled' => env('CONTACTS_MANAGER_UI', false),
             'middleware' => ['web'],
+            'theme' => 'embedded',
         ],
     ],
 ];
