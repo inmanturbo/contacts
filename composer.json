@@ -20,6 +20,7 @@
         "illuminate/contracts": "^10.0|^11.0",
         "inmanturbo/turbohx": "@dev",
         "laravel/folio": "^1.1",
+        "laravel/jetstream": "@dev",
         "livewire/volt": "^1.6",
         "spatie/laravel-navigation": "^1.2",
         "spatie/laravel-package-tools": "^1.14.0"

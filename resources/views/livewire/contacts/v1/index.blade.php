@@ -51,11 +51,11 @@ $contacts = computed(function () {
                 class="py-2 px-4 mt-1 w-full text-gray-700 bg-gray-200 rounded-lg sm:p-1 sm:w-3/12"
                 placeholder="Search Contacts..." wire:model.live="search" />
 
-            <x-contacts::button wire:click="add()" px="px-4" py="py-2" class="justify-center w-full sm:w-16">
+            <x-contacts::secondary-button-link wire:navigate="true" :href="route('contacts.v1.create')" px="px-4" py="py-2" class="justify-center w-full sm:w-16">
                 <span>
                     {{ __('Add') }}
                 </span>
-            </x-contacts::button>
+            </x-contacts::secondary-button-link>
 
             <x-contacts::button wire:click="$set('uploadDialog', true)" type="file" px="px-0" py="py-2"
                 class="justify-center space-x-1 w-full sm:w-40" title="uploadCsv">
